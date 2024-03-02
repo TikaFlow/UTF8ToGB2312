@@ -1,16 +1,20 @@
+简体中文 | [English](README_EN.md)
+
 # UTF8ToGB2312
 
-English | [简体中文](README_CN.md)
+一个把UTF-8字符串转换成GB2312字符串的Arduino库。
 
-An Arduino library that converts UTF-8 string to GB2312 string.
+> 已内置GB2312字库。
 
-> GB2312 library is included.
+# 用法
 
-# Usage
+- ~~下载zip包。~~
+- 在`Arduino IDE`中[安装库](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)。
+- 引入头文件: `#include "UTF8ToGB2312.h"`。
+- 默认有一个静态变量`GB`。
+- 通过`GB.get(<UTF-8字符串>);`语句将`UTF-8`字符串转换成`GB2312`字符串。
+- 更详细用法请参考[样例](examples)。
 
-1. Download zip file.
-2. [Install library](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries) in your Arduino IDE.
-3. Include head file: `#include "UTF8ToGB2312.h"`.
-4. Now you get a static variable `GB`.
-5. Convert UTF-8 string to GB2312 string by using `GB.get(<UTF-8 string>);`.
-6. See more in [examples](examples).
+# 注意
+
+只能转换在`GB2312`中已收录的字符，其余字符无法转换，否则可能出现乱码。[#1](https://github.com/TikaFlow/UTF8ToGB2312/issues/1)
