@@ -11,7 +11,7 @@ An Arduino library that converts UTF-8 string to GB2312 string.
 - ~~Download zip file.~~
 - [Install library](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries) in your `Arduino IDE`.
 - Include head file: `#include "UTF8ToGB2312.h"`.
-- Now you get a static variable `GB`.
+- Now you get a global variable `GB`.
 - Convert `UTF-8` string to `GB2312` string by using `GB.get(<UTF-8 string>);`.
 - See more in [examples](examples).
 

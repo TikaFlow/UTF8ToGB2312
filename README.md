@@ -11,7 +11,7 @@
 - ~~下载zip包。~~
 - 在`Arduino IDE`中[安装库](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)。
 - 引入头文件: `#include "UTF8ToGB2312.h"`。
-- 默认有一个静态变量`GB`。
+- 现在有一个全局变量`GB`。
 - 通过`GB.get(<UTF-8字符串>);`语句将`UTF-8`字符串转换成`GB2312`字符串。
 - 更详细用法请参考[样例](examples)。
 
