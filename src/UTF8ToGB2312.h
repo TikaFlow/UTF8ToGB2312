@@ -49,7 +49,7 @@ typedef struct {
 }
 #endif /* __cplusplus */
 
-static const unsigned short gb2312_2charset[7445] = {
+static const unsigned short gb2312_2charset[7445] PROGMEM = {
         0x2168,
         0x216c,
         0x2127,
@@ -9125,7 +9125,10 @@ private:
     String toGB2312(Unibytes wc);
 
 public:
+    // an alias of from()
     String get(String utf8_str);
+    // convert from utf8 to gb2312
+    String from(String utf8_str);
 };
 
 extern U2GB GB;

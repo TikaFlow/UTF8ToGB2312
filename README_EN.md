@@ -15,6 +15,15 @@ An Arduino library that converts UTF-8 string to GB2312 string.
 - Convert `UTF-8` string to `GB2312` string by using `GB.get(<UTF-8 string>);`.
 - See more in [examples](examples).
 
+```cpp
+#include "UTF8ToGB2312.h"
+
+// in setup() or loop()
+GB.from("你好，世界！");
+// or use get, which is an alias of from()
+GB.get("你好，世界！");
+```
+
 # Notice
 
 Only the characters included in `GB2312` can be converted, the rest of the characters cannot be converted, or garbled characters may appear.[#1](https://github.com/TikaFlow/UTF8ToGB2312/issues/1)
