@@ -9,3 +9,4 @@ U2GB    KEYWORD1
 #######################################
 
 get     KEYWORD2
+from    KEYWORD2
