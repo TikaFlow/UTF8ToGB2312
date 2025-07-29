@@ -5,7 +5,7 @@
  *
  *    Description:  Converts UTF-8 string to GB2312 string in Arduino(GB2312 library is included).
  *
- *        Version:  1.2.2
+ *        Version:  1.2.3
  *        Created:  2023-09-23 14:17:34
  *
  *         Author:  Tika Flow
