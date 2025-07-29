@@ -5,7 +5,7 @@
  *
  *    Description:  Converts UTF-8 string to GB2312 string in Arduino(GB2312 library is included).
  *
- *        Version:  1.2.1
+ *        Version:  1.2.2
  *        Created:  2023-09-23 14:17:34
  *
  *         Author:  Tika Flow
@@ -34,6 +34,7 @@ String U2GB::toGB2312(Unibytes ub) {
     } else {
         ucs4_t wc = ub.unicode;
         const Summary16 *summary = NULL;
+        Summary16 target;
         
         // 根据Unicode范围查找对应的索引页
         if (wc >= 0x0000 && wc < 0x0460) {
@@ -54,7 +55,10 @@ String U2GB::toGB2312(Unibytes ub) {
         }
 
         if (summary) {
-            unsigned short used = summary->used;
+            target.indx=pgm_read_word(&summary->indx);
+            target.used=pgm_read_word(&summary->used);
+
+            unsigned short used = target.used;
             unsigned int i = wc & 0x0f;
             
             // 检查该字符是否在当前页中有定义
@@ -68,16 +72,13 @@ String U2GB::toGB2312(Unibytes ub) {
                 used = (used & 0x00ff) + (used >> 8);
                 
                 // 从PROGMEM中读取GB2312编码
-                c = pgm_read_word(&gb2312_2charset[summary->indx + used]);
+                c = pgm_read_word(&gb2312_2charset[target.indx + used]);
                 t[0] = (c >> 8) | 0x80;
                 t[1] = (c & 0xff) | 0x80;
             } else {
                 // 当前页中未找到该字符
                 is_gb2312_missing = true;
             }
-        } else if (!is_gb2312_missing) {
-            // 未找到对应的索引页
-            is_gb2312_missing = true;
         }
     }
 

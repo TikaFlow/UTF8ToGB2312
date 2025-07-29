@@ -9,7 +9,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(GB.get(str1)); // "你好" // 无效的字符被过滤 Invalid characters are filtered
+  Serial.println(GB.from(str1)); // "你好" // 无效的字符被过滤
   delay(1000);
 
   Serial.println(GB.get(str2)); // "你好" // Invalid characters are filtered

@@ -5,7 +5,7 @@
  *
  *    Description:  Converts UTF-8 string to GB2312 string in Arduino(GB2312 library is included).
  *
- *        Version:  1.2.1
+ *        Version:  1.2.2
  *        Created:  2023-09-23 14:17:34
  *
  *         Author:  Tika Flow
@@ -7497,7 +7497,7 @@ static const unsigned short gb2312_2charset[7445] PROGMEM = {
         0x2324,
 };
 
-static const Summary16 gb2312_uni2indx_page00[70] = {
+static const Summary16 gb2312_uni2indx_page00[70] PROGMEM = {
         /* 0x0000 */
         {0,   0x0000},
         {0,   0x0000},
@@ -7574,7 +7574,7 @@ static const Summary16 gb2312_uni2indx_page00[70] = {
         {132, 0xffff},
         {148, 0x0002},
 };
-static const Summary16 gb2312_uni2indx_page20[101] = {
+static const Summary16 gb2312_uni2indx_page20[101] PROGMEM = {
         /* 0x2000 */
         {149, 0x0000},
         {149, 0x3360},
@@ -7684,7 +7684,7 @@ static const Summary16 gb2312_uni2indx_page20[101] = {
         {345, 0x0000},
         {345, 0x0005},
 };
-static const Summary16 gb2312_uni2indx_page30[35] = {
+static const Summary16 gb2312_uni2indx_page30[35] PROGMEM = {
         /* 0x3000 */
         {347, 0xff2f},
         {360, 0x00fb},
@@ -7724,7 +7724,7 @@ static const Summary16 gb2312_uni2indx_page30[35] = {
         {574, 0x0000},
         {574, 0x03ff},
 };
-static const Summary16 gb2312_uni2indx_page4e[1263] = {
+static const Summary16 gb2312_uni2indx_page4e[1263] PROGMEM = {
         /* 0x4e00 */
         {584,  0x7f8b},
         {595,  0x7f7b},
@@ -9068,7 +9068,7 @@ static const Summary16 gb2312_uni2indx_page4e[1263] = {
         {7198, 0xf3f9},
         {7210, 0x0004},
 };
-static const Summary16 gb2312_uni2indx_page9e[27] = {
+static const Summary16 gb2312_uni2indx_page9e[27] PROGMEM = {
         /* 0x9e00 */
         {7211, 0x0000},
         {7211, 0x8000},
@@ -9099,7 +9099,7 @@ static const Summary16 gb2312_uni2indx_page9e[27] = {
         {7342, 0x8e00},
         {7346, 0x0001},
 };
-static const Summary16 gb2312_uni2indx_pageff[15] = {
+static const Summary16 gb2312_uni2indx_pageff[15] PROGMEM = {
         /* 0xff00 */
         {7347, 0xfffe},
         {7362, 0xffff},
