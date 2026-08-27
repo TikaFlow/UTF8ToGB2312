@@ -158,8 +158,8 @@ Unibytes U2GB::getUnicodeChar(const char *str) {
     // 检查UTF-8编码有效性和范围
     if (ub.bytes == 0
         ||(ub.bytes > 1 && (*p == 0xc0 || *p == 0xc1)) // 禁止的过度编码
-        ||(ub.unicode > 0x10FFFF) // Unicode超出有效范围
-        ||(ub.unicode >= 0xD800 && ub.unicode <= 0xDFFF)) { // 代理区域字符
+        ||(e > 0x10FFFF) // Unicode超出有效范围
+        ||(e >= 0xD800 && e <= 0xDFFF)) { // 代理区域字符
             ub.bytes = 0;
             ub.unicode = 0;
     } else {
