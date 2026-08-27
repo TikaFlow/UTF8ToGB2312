@@ -1,7 +1,7 @@
-#include <Arduino.h>
-
 #ifndef UTF8_TO_GB2312_H
 #define UTF8_TO_GB2312_H
+
+#include <Arduino.h>
 
 #ifdef __cplusplus
 extern "C"{
