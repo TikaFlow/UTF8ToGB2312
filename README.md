@@ -27,3 +27,9 @@ GB.get("你好，世界！");
 # 注意
 
 只能转换在`GB2312`中已收录的字符，其余字符无法转换，否则可能出现乱码。[#1](https://github.com/TikaFlow/UTF8ToGB2312/issues/1)
+
+# 鸣谢
+
+本库参考了 [char_conversion](https://github.com/bill611/char_conversion)。
+
+其中 GB2312 字库表源自 [GNU libiconv](https://www.gnu.org/software/libiconv/)，遵循 LGPL-2.0-or-later 许可证。

@@ -27,3 +27,9 @@ GB.get("你好，世界！");
 # Notice
 
 Only the characters included in `GB2312` can be converted, the rest of the characters cannot be converted, or garbled characters may appear.[#1](https://github.com/TikaFlow/UTF8ToGB2312/issues/1)
+
+# Acknowledgements
+
+This library references [char_conversion](https://github.com/bill611/char_conversion).
+
+The GB2312 charset table comes from [GNU libiconv](https://www.gnu.org/software/libiconv/), licensed under LGPL-2.0-or-later.
