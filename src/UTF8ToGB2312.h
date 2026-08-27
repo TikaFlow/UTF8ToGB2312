@@ -9120,15 +9120,15 @@ static const Summary16 gb2312_uni2indx_pageff[15] PROGMEM = {
 
 class U2GB {
 private:
-    Unibytes getUnicodeChar(char *str);
+    Unibytes getUnicodeChar(const char *str);
 
     String toGB2312(Unibytes wc);
 
 public:
     // an alias of from()
-    String get(String utf8_str);
+    String get(const String &utf8_str);
     // convert from utf8 to gb2312
-    String from(String utf8_str);
+    String from(const String &utf8_str);
 };
 
 extern U2GB GB;

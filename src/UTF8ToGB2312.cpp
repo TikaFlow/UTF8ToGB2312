@@ -80,8 +80,8 @@ String U2GB::toGB2312(Unibytes ub) {
  * @param str UTF-8 character which to be converted
  * @returns Unibytes which contains Unicode and bytes count of the UTF-8 character (1 ~ 6)
  */
-Unibytes U2GB::getUnicodeChar(char *str) {
-    unsigned char *p = (unsigned char *) str;
+Unibytes U2GB::getUnicodeChar(const char *str) {
+    const unsigned char *p = (const unsigned char *) str;
     ucs4_t e = 0;
     Unibytes ub = {0, 0}; // 初始化bytes为0表示无效
 
@@ -174,7 +174,7 @@ Unibytes U2GB::getUnicodeChar(char *str) {
  * @param utf8_str UTF-8 string which to be converted
  * @returns GB2312 string
  */
-String U2GB::get(String utf8_str) {
+String U2GB::get(const String &utf8_str) {
     return from(utf8_str);
 }
 
@@ -183,7 +183,7 @@ String U2GB::get(String utf8_str) {
  * @param utf8_str UTF-8 string which to be converted
  * @returns GB2312 string
  */
-String U2GB::from(String utf8_str) {
+String U2GB::from(const String &utf8_str) {
     Unibytes ub;
     String res = "";
     int i = 0;
