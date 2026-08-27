@@ -9,12 +9,12 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(GB.get(str1));
+  Serial.println(U2GB::get(str1));
   delay(1000);
 
-  Serial.println(GB.get(str2));
+  Serial.println(U2GB::get(str2));
   delay(1000);
 
-  Serial.println(GB.get(str3));
+  Serial.println(U2GB::get(str3));
   delay(1000);
 }

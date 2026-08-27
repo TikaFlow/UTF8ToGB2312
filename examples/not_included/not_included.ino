@@ -7,6 +7,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(GB.get(str)); // "你????好" // —未被GB2312收录
+  Serial.println(U2GB::get(str)); // "你????好" // —未被GB2312收录
   delay(1000);
 }
