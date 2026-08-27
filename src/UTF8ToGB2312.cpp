@@ -9287,11 +9287,12 @@ String U2GB::from(const String &utf8_str) {
     }
     
     res.reserve(utf8_str.length());
+    const char *cstr = utf8_str.c_str();
     Unibytes ub;
     int i = 0;
 
-    while (utf8_str[i]) {
-        ub = getUnicodeChar(&utf8_str[i]);
+    while (cstr[i]) {
+        ub = getUnicodeChar(&cstr[i]);
 
         if (ub.bytes == 0) {
             // 处理无效UTF-8字符，使用空串代替
