@@ -9169,7 +9169,7 @@ String U2GB::toGB2312(Unibytes ub) {
 
     res += t;
     return res;
-};
+}
 
 /**
  * @brief convert UTF-8 character to Unicode character
@@ -9280,9 +9280,14 @@ String U2GB::get(const String &utf8_str) {
  * @returns GB2312 string
  */
 String U2GB::from(const String &utf8_str) {
-    Unibytes ub;
     String res = "";
+    if (utf8_str.length() == 0) {
+        // 空字符串直接返回
+        return res;
+    }
+    
     res.reserve(utf8_str.length());
+    Unibytes ub;
     int i = 0;
 
     while (utf8_str[i]) {
