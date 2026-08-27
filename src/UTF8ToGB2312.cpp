@@ -82,7 +82,7 @@ String U2GB::toGB2312(Unibytes ub) {
  */
 Unibytes U2GB::getUnicodeChar(char *str) {
     unsigned char *p = (unsigned char *) str;
-    unsigned int e = 0;
+    ucs4_t e = 0;
     Unibytes ub = {0, 0}; // 初始化bytes为0表示无效
 
     // 检查首字节是否为非法的7个或8个前置1

@@ -7,7 +7,7 @@
 extern "C"{
 #endif /* __cplusplus */
 
-typedef unsigned int ucs4_t;
+typedef uint32_t ucs4_t;
 
 typedef struct {
     unsigned short indx; /* index into big table */
