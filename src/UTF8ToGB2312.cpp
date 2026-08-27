@@ -186,6 +186,7 @@ String U2GB::get(const String &utf8_str) {
 String U2GB::from(const String &utf8_str) {
     Unibytes ub;
     String res = "";
+    res.reserve(utf8_str.length());
     int i = 0;
 
     while (utf8_str[i]) {
